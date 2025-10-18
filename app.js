@@ -12,9 +12,9 @@ while (chute != numeroSecreto) {
     console.log('Resultado da comparação:', chute == numeroSecreto);
 
     if (chute == numeroSecreto) {
-        alert(`Acertou! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`);
+        break;
     } else {
-        
+
         if (chute > numeroSecreto) {
             alert('O número secreto é menor');
         } else {
@@ -23,3 +23,6 @@ while (chute != numeroSecreto) {
         tentativas++;
     }
 }
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 
+'tentativa';
+alert(`Acertou! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`); 
